@@ -18,5 +18,7 @@
         "react"
     ],
     "rules": {
+        "semi": "off",
+        "@typescript-eslint/semi": "warn"
     }
 }

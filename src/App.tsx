@@ -1,12 +1,12 @@
-import React from 'react'
-import { Navbar } from './components/Navbar'
+import * as React from 'react';
+import LandingPage from './pages/LandingPage';
 
-const App = () => {
+const App: React.FunctionComponent = () => {
   return (
-    <div className="App">
-      <Navbar/>
+    <div>
+      <LandingPage/>
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
