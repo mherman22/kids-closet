@@ -19,6 +19,7 @@
     ],
     "rules": {
         "semi": "off",
-        "@typescript-eslint/semi": "warn"
+        "@typescript-eslint/semi": "warn",
+        "@typescript-eslint/no-confusing-void-expression": "warn"
     }
 }

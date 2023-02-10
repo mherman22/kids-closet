@@ -6,14 +6,14 @@ export interface AnnouncementProps {
 }
 
 const Container = styled.div`
-    height: 60px;
-    font-size: 20px;
-    font-weight: 500;
-    color: white;
-    background-color: #f34e0c;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  height: 30px;
+  background-color: orange;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 500;
 `
 const Announcement: React.FunctionComponent<AnnouncementProps> = ({ children }) => {
   return (
