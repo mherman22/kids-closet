@@ -1,14 +1,18 @@
 import * as React from 'react';
-import Navbar from '../components/Navbar';
-import ImageSlider from '../components/Slider';
-import Announcement from '../components/Announcement';
+import Announcement from '../components/Header/Announcement';
+import Categories from '../components/Categories/Categories';
+import Navbar from '../components/Header/Navbar';
+import ImageSlider from '../components/Header/Slider';
+import Products from '../components/Products/Products';
 
 const LandingPage: React.FunctionComponent = () => {
   return (
     <div>
       <Announcement>Huge deals! Buy one and receive one for free!</Announcement>
-      <Navbar language={'EN'} logoName={'Kids Korner, Nansana...'} signUpString={'Sign Up'} signInString={'Sign In'}/>
+      <Navbar language={'EN'} logoName={'Kids Korner, Nansana...'} signUpString={'Create New Account'} signInString={'Sign In'}/>
       <ImageSlider/>
+      <Categories/>
+      <Products/>
     </div>
   );
 };

@@ -1,8 +1,8 @@
 import { ArrowLeftOutlined, ArrowRightOutlined } from '@mui/icons-material';
 import * as React from 'react';
 import styled from 'styled-components';
-import mobile from '../responsive';
-import { sliderItems } from '../data/data';
+import mobile from '../../responsive';
+import { sliderItems } from '../../data/data';
 
 export interface ArrowProps {
   direction: string
@@ -76,11 +76,13 @@ const Desc = styled.p`
   letter-spacing: 3px;
 `
 const Button = styled.button`
+  /* border: none; */
+  background-color: #fff;
+  color: orange;
   padding: 10px;
-  font-size: 20px;
-  background-color: transparent;
   cursor: pointer;
-`
+`;
+
 const ImageSlider: React.FunctionComponent = () => {
   const [sliderIndex, setSlideIndex] = React.useState(0);
   const handleClick = (direction: string): void => {
@@ -99,7 +101,7 @@ const ImageSlider: React.FunctionComponent = () => {
         {sliderItems.map((sliderItem) => (
           <Slide bg={sliderItem.bg} key={sliderItem.id}>
             <ImageContainer>
-              <Image />
+              <Image src={sliderItem.img}/>
             </ImageContainer>
             <InformationContainer>
               <Title>{sliderItem.title}</Title>

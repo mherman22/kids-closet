@@ -2,7 +2,7 @@ import { Search, ShoppingCartOutlined } from '@mui/icons-material';
 import Badge from '@mui/material/Badge/Badge';
 import React from 'react';
 import styled from 'styled-components';
-import mobile from '../responsive';
+import mobile from '../../responsive';
 
 export interface NavbarProps {
   language: string
@@ -73,6 +73,14 @@ const MenuItem = styled.div`
   ${mobile({ fontSize: '12px', marginLeft: '10px' })}
 `;
 
+const Button = styled.button`
+  /* border: none; */
+  background-color: #fff;
+  color: orange;
+  padding: 10px;
+  cursor: pointer;
+`;
+
 const Navbar: React.FunctionComponent<NavbarProps> = ({ language, logoName, signInString, signUpString }) => {
   return (
     <Container>
@@ -85,8 +93,9 @@ const Navbar: React.FunctionComponent<NavbarProps> = ({ language, logoName, sign
         </Left>
         <Center><Logo>{logoName}</Logo></Center>
         <Right>
-          <MenuItem>{signUpString}</MenuItem>
-          <MenuItem>{signInString}</MenuItem>
+          <MenuItem>
+            <Button>{signUpString}</Button></MenuItem>
+          <MenuItem><Button>{signInString}</Button></MenuItem>
           <MenuItem>
             <Badge badgeContent={4} color='primary'>
               <ShoppingCartOutlined />
