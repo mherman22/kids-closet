@@ -12,8 +12,8 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 14px;
-  font-weight: 500;
+  font-size: 15px;
+  font-weight: 600;
 `
 const Announcement: React.FunctionComponent<AnnouncementProps> = ({ children }) => {
   return (

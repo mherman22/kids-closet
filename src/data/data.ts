@@ -50,7 +50,7 @@ export const popularProducts = [
   },
   {
     id: 2,
-    img: 'https://cdn.shopify.com/s/files/1/0101/4832/products/Angela_Natural_Tee.png?v=1606780388'
+    img: 'https://preview.colorlib.com/theme/cozastore/images/banner-03.jpg'
   },
   {
     id: 3,

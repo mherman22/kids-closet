@@ -14,6 +14,8 @@ export interface NavbarProps {
 const Container = styled.div`
   height: 60px;
   ${mobile({ height: '50px' })}
+  text-align: center;
+  transition: all .7s ease-in;
 `;
 
 const Wrapper = styled.div`
@@ -73,14 +75,6 @@ const MenuItem = styled.div`
   ${mobile({ fontSize: '12px', marginLeft: '10px' })}
 `;
 
-const Button = styled.button`
-  /* border: none; */
-  background-color: #fff;
-  color: orange;
-  padding: 10px;
-  cursor: pointer;
-`;
-
 const Navbar: React.FunctionComponent<NavbarProps> = ({ language, logoName, signInString, signUpString }) => {
   return (
     <Container>
@@ -93,9 +87,8 @@ const Navbar: React.FunctionComponent<NavbarProps> = ({ language, logoName, sign
         </Left>
         <Center><Logo>{logoName}</Logo></Center>
         <Right>
-          <MenuItem>
-            <Button>{signUpString}</Button></MenuItem>
-          <MenuItem><Button>{signInString}</Button></MenuItem>
+          <MenuItem>{signUpString}</MenuItem>
+          <MenuItem>{signInString}</MenuItem>
           <MenuItem>
             <Badge badgeContent={4} color='primary'>
               <ShoppingCartOutlined />
