@@ -14,8 +14,6 @@ export interface NavbarProps {
 const Container = styled.div`
   height: 60px;
   ${mobile({ height: '50px' })}
-  text-align: center;
-  transition: all .7s ease-in;
 `;
 
 const Wrapper = styled.div`
