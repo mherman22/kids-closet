@@ -2,6 +2,7 @@ import { Send } from '@mui/icons-material';
 import * as React from 'react';
 import styled from 'styled-components';
 import mobile from '../../responsive';
+import { useTranslation } from 'react-i18next';
 
 const Container = styled.div`
   height: 60vh;
@@ -48,10 +49,11 @@ const Button = styled.button`
 `;
 
 const NewsLetter: React.FunctionComponent = () => {
+  const { t } = useTranslation();
   return (
     <Container>
-        <Title>Newsletter</Title>
-          <Desc>Get timely updates from your favorite products.</Desc>
+        <Title>{t('Newsletter')}</Title>
+          <Desc>{t('Get timely updates from your favorite products.')}</Desc>
           <InputContainer>
             <Input placeholder='Your email' />
             <Button>

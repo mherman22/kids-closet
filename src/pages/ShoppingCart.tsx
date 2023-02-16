@@ -5,6 +5,7 @@ import Announcement from '../components/Header/Announcement';
 import Footer from '../components/Footer/Footer';
 import { Add, Remove } from '@mui/icons-material';
 import mobile from '../responsive';
+import { useTranslation } from 'react-i18next';
 
 export interface IProps {
   type1: string
@@ -151,19 +152,20 @@ const ProductPrice = styled.div`
 `;
 
 const ShoppingCart: React.FunctionComponent = () => {
+  const { t } = useTranslation();
   return (
     <Container>
       <Navbar language={'EN'} logoName={'Kids Korner'} signUpString={'REGISTER'} signInString={'LOGIN'}/>
-      <Announcement>Huge deals! Buy one and receive one for free!</Announcement>
+      <Announcement>{t('Huge deals! Buy one and receive one for free!')}</Announcement>
       <Wrapper>
-        <Title>YOUR BAG</Title>
+        <Title>{t('YOUR BAG')}</Title>
         <Top>
-            <TopButton type1='none'>CONTINUE SHOPPING</TopButton>
+            <TopButton type1='none'>{t('CONTINUE SHOPPING')}</TopButton>
             <TopTexts>
-                <TopText>Shopping List (0)</TopText>
-                <TopText>WishList (0)</TopText>
+                <TopText>{t('Shopping List (0)')}</TopText>
+                <TopText>{t('WishList (0)')}</TopText>
             </TopTexts>
-            <TopButton type1='filled'>CHECKOUT NOW</TopButton>
+            <TopButton type1='filled'>{t('CHECKOUT NOW')}</TopButton>
         </Top>
         <Bottom>
             <Info>
@@ -171,10 +173,10 @@ const ShoppingCart: React.FunctionComponent = () => {
                     <ProductDetails>
                         <Image src='https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c2hvZXN8ZW58MHx8MHx8&auto=format&fit=crop&w=1400&q=60'/>
                         <Detail>
-                            <ProductName><b>Name: </b>JACKET-LINEN</ProductName>
-                            <ProductID><b>ID: </b>0937642556276</ProductID>
+                            <ProductName><b>{t('Name:')} </b>JACKET-LINEN</ProductName>
+                            <ProductID><b>{t('ID')}: </b>0937642556276</ProductID>
                             <ProductColor color='red'/>
-                            <ProductSize><b>Size: </b>42</ProductSize>
+                            <ProductSize><b>{t('Size')}: </b>42</ProductSize>
                         </Detail>
                     </ProductDetails>
                     <PriceDetails>
@@ -189,24 +191,24 @@ const ShoppingCart: React.FunctionComponent = () => {
                 <Hr/>
             </Info>
             <Summary>
-              <SummaryTitle>ORDER SUMMARY</SummaryTitle>
+              <SummaryTitle>{t('ORDER SUMMARY')}</SummaryTitle>
               <SummaryItem type1=''>
-                <SummaryItemText>Subtotal</SummaryItemText>
+                <SummaryItemText>{t('Subtotal')}</SummaryItemText>
                 <SummaryItemPrice>$ 80</SummaryItemPrice>
               </SummaryItem>
               <SummaryItem type1=''>
-                <SummaryItemText>Estimated Discount</SummaryItemText>
+                <SummaryItemText>{t('Estimated Discount')}</SummaryItemText>
                 <SummaryItemPrice>$ 5.90</SummaryItemPrice>
               </SummaryItem>
               <SummaryItem type1=''>
-                <SummaryItemText>Shipping Discount</SummaryItemText>
+                <SummaryItemText>{t('Shipping Discount')}</SummaryItemText>
                 <SummaryItemPrice>$ 5.90</SummaryItemPrice>
               </SummaryItem>
               <SummaryItem type1='total'>
-                <SummaryItemText>Total</SummaryItemText>
+                <SummaryItemText>{t('Total')}</SummaryItemText>
                 <SummaryItemPrice>$ 80</SummaryItemPrice>
               </SummaryItem>
-              <Button>CheckOut</Button>
+              <Button>{t('CheckOut')}</Button>
             </Summary>
         </Bottom>
       </Wrapper>

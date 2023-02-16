@@ -3,6 +3,7 @@ import * as React from 'react';
 import styled from 'styled-components';
 import mobile from '../../responsive';
 import { sliderItems } from '../../data/data';
+import { useTranslation } from 'react-i18next';
 
 export interface ArrowProps {
   direction: string
@@ -84,6 +85,7 @@ const Button = styled.button`
 `;
 
 const ImageSlider: React.FunctionComponent = () => {
+  const { t } = useTranslation();
   const [sliderIndex, setSlideIndex] = React.useState(0);
   const handleClick = (direction: string): void => {
     if (direction === 'left') {
@@ -106,7 +108,7 @@ const ImageSlider: React.FunctionComponent = () => {
             <InformationContainer>
               <Title>{sliderItem.title}</Title>
               <Desc>{sliderItem.desc}</Desc>
-              <Button>SHOW NOW</Button>
+              <Button>{t('SHOW NOW')}</Button>
             </InformationContainer>
           </Slide>
         ))}

@@ -6,11 +6,13 @@ import ImageSlider from '../components/Header/Slider';
 import Products from '../components/Products/Products';
 import NewsLetter from '../components/Footer/NewsLetter';
 import Footer from '../components/Footer/Footer';
+import { useTranslation } from 'react-i18next';
 
 const LandingPage: React.FunctionComponent = () => {
+  const { t } = useTranslation();
   return (
     <div>
-      <Announcement>Huge deals! Buy one and receive one for free!</Announcement>
+      <Announcement>{t('Huge deals! Buy one and receive one for free!')}</Announcement>
       <Navbar language={'EN'} logoName={'Kids Korner'} signUpString={'REGISTER'} signInString={'LOGIN'}/>
       <ImageSlider/>
       <Categories/>

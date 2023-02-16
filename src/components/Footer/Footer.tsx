@@ -2,7 +2,7 @@ import { Facebook, Instagram, MailOutline, Phone, Pinterest, Room, Twitter } fro
 import * as React from 'react';
 import styled from 'styled-components';
 import mobile from '../../responsive';
-// import avator from '../../data/logo.png';
+import { useTranslation } from 'react-i18next';
 
 const Container = styled.div`
   display: flex;
@@ -81,14 +81,13 @@ const Payment = styled.img`
 `;
 
 const Footer: React.FunctionComponent = () => {
+  const { t } = useTranslation();
   return (
    <Container>
       <Left>
         <Image src='https://app.logo.com/view/logo_f5e5e9d6-d4c6-489f-ac7e-d02742bfaafa' alt=''/>
         <Desc>
-          There are many variations of passages of Lorem Ipsum available, but
-          the majority have suffered alteration in some form, by injected
-          humour, or randomised words which don’t look even slightly believable.
+          {t('There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don’t look even slightly believable.')}
         </Desc>
         <SocialContainer>
           <SocialIcon color='3B5999'>
@@ -106,30 +105,30 @@ const Footer: React.FunctionComponent = () => {
         </SocialContainer>
       </Left>
       <Center>
-        <Title>Useful Links</Title>
+        <Title>{t('Useful Links')}</Title>
         <List>
-          <ListItem>Home</ListItem>
-          <ListItem>Cart</ListItem>
-          <ListItem>Man Fashion</ListItem>
-          <ListItem>Woman Fashion</ListItem>
-          <ListItem>Accessories</ListItem>
-          <ListItem>My Account</ListItem>
-          <ListItem>Order Tracking</ListItem>
-          <ListItem>Wishlist</ListItem>
-          <ListItem>Wishlist</ListItem>
-          <ListItem>Terms</ListItem>
+          <ListItem>{t('Home')}</ListItem>
+          <ListItem>{t('Cart')}</ListItem>
+          <ListItem>{t('Man Fashion')}</ListItem>
+          <ListItem>{t('Woman Fashion')}</ListItem>
+          <ListItem>{t('Accessories')}</ListItem>
+          <ListItem>{t('My Account')}</ListItem>
+          <ListItem>{t('Order Tracking')}</ListItem>
+          <ListItem>{t('Wishlist')}</ListItem>
+          <ListItem>{t('Wishlist')}</ListItem>
+          <ListItem>{t('Terms')}</ListItem>
         </List>
       </Center>
       <Right>
-        <Title>Contact</Title>
+        <Title>{t('Contact')}</Title>
         <ContactItem>
-          <Room style={{ marginRight: '10px' }}/> 622 Dixie Path , South Tobinchester 98336
+          <Room style={{ marginRight: '10px' }}/> {t('622 Dixie Path , South Tobinchester 98336')}
         </ContactItem>
         <ContactItem>
-          <Phone style={{ marginRight: '10px' }}/> +1 234 56 78
+          <Phone style={{ marginRight: '10px' }}/> {t('+1 234 56 78')}
         </ContactItem>
         <ContactItem>
-          <MailOutline style={{ marginRight: '10px' }} /> contact@lama.dev
+          <MailOutline style={{ marginRight: '10px' }} /> {t('contact@lama.dev')}
         </ContactItem>
         <Payment src='https://i.ibb.co/Qfvn4z6/payment.png' />
       </Right>

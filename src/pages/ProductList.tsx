@@ -5,6 +5,7 @@ import Announcement from '../components/Header/Announcement';
 import Products from '../components/Products/Products';
 import NewsLetter from '../components/Footer/NewsLetter';
 import Footer from '../components/Footer/Footer';
+import { useTranslation } from 'react-i18next';
 
 const Container = styled.div`
     
@@ -33,41 +34,42 @@ const OPtion = styled.option`
 `
 
 const ProductList: React.FunctionComponent = () => {
+    const { t } = useTranslation();
   return (
     <Container>
       <Navbar language={'EN'} logoName={'Kids Korner'} signUpString={'REGISTER'} signInString={'LOGIN'}/>
-      <Announcement>Huge deals! Buy one and receive one for free!</Announcement>
-      <Title>Dresses</Title>
+      <Announcement>{t('Huge deals! Buy one and receive one for free!')}</Announcement>
+      <Title>{t('Dresses')}</Title>
       <FilterCOntainer>
         <Filter>
-            <FilterText>Filter Products:</FilterText>
+            <FilterText>{t('Filter Products:')}</FilterText>
             <Select>
-                <OPtion disabled selected>Color</OPtion>
-                <OPtion>Red</OPtion>
-                <OPtion>Green</OPtion>
-                <OPtion>Yellow</OPtion>
-                <OPtion>Orange</OPtion>
-                <OPtion>Black</OPtion>
-                <OPtion>Teal</OPtion>
-                <OPtion>Blue</OPtion>
-                <OPtion>Green</OPtion>
+                <OPtion disabled selected>{t('Color')}</OPtion>
+                <OPtion>{t('Red')}</OPtion>
+                <OPtion>{t('Green')}</OPtion>
+                <OPtion>{t('Yellow')}</OPtion>
+                <OPtion>{t('Orange')}</OPtion>
+                <OPtion>{t('Black')}</OPtion>
+                <OPtion>{t('Teal')}</OPtion>
+                <OPtion>{t('Blue')}</OPtion>
+                <OPtion>{t('Green')}</OPtion>
             </Select>
             <Select>
-                <OPtion disabled selected>Size</OPtion>
-                <OPtion>XS</OPtion>
-                <OPtion>S</OPtion>
-                <OPtion>M</OPtion>
-                <OPtion>L</OPtion>
-                <OPtion>XL</OPtion>
-                <OPtion>XXL</OPtion>
+                <OPtion disabled selected>{t('Size')}</OPtion>
+                <OPtion>{t('XS')}</OPtion>
+                <OPtion>{t('S')}</OPtion>
+                <OPtion>{t('M')}</OPtion>
+                <OPtion>{t('L')}</OPtion>
+                <OPtion>{t('XL')}</OPtion>
+                <OPtion>{t('XXL')}</OPtion>
             </Select>
         </Filter>
         <Filter>
-            <FilterText>Sort Products:</FilterText>
+            <FilterText>{t('Sort Products:')}</FilterText>
             <Select>
-                <OPtion selected>Newest</OPtion>
-                <OPtion>Price (ascending)</OPtion>
-                <OPtion>Price (descending)</OPtion>
+                <OPtion selected>{t('Newest')}</OPtion>
+                <OPtion>{t('Price (ascending)')}</OPtion>
+                <OPtion>{t('Price (descending)')}</OPtion>
             </Select>
         </Filter>
       </FilterCOntainer>

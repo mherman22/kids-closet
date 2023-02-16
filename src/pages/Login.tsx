@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useTranslation } from 'react-i18next';
 import styled from 'styled-components';
 
 const Container = styled.div`
@@ -55,16 +56,17 @@ const Link = styled.a`
 `
 
 const Login: React.FunctionComponent = () => {
+  const { t } = useTranslation();
   return (
     <Container>
         <Wrapper>
-            <Title>LOGIN</Title>
+            <Title>{t('LOGIN')}</Title>
             <Form>
                 <Input placeholder='email address'/>
                 <Input placeholder='password'/>
-                <Button>LOGIN</Button>
-                <Link>Forgot Password?</Link>
-                <Link>Wanna create a new account?</Link>
+                <Button>{t('LOGIN')}</Button>
+                <Link>{t('Forgot Password?')}</Link>
+                <Link>{t('Wanna create a new account?')}</Link>
             </Form>
         </Wrapper>
     </Container>

@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useTranslation } from 'react-i18next';
 import styled from 'styled-components';
 
 const Container = styled.div`
@@ -53,10 +54,11 @@ const Button = styled.button`
 `
 
 const Register: React.FunctionComponent = () => {
+    const { t } = useTranslation();
   return (
     <Container>
         <Wrapper>
-            <Title>CREATE NEW ACCOUNT</Title>
+            <Title>{t('CREATE NEW ACCOUNT')}</Title>
             <Form>
                 <Input placeholder='first name'/>
                 <Input placeholder='last name'/>
@@ -66,9 +68,9 @@ const Register: React.FunctionComponent = () => {
                 <Input placeholder='password'/>
                 <Input placeholder='confirm password'/>
                 <AgreeToTerms>
-                    I consent to processing of my personnal data in accordance to the <b>PRIVACY POLICY.</b>
+                    {t('I consent to processing of my personnal data in accordance to the')} <b>{t('PRIVACY POLICY.')}</b>
                 </AgreeToTerms>
-                <Button>REGISTER</Button>
+                <Button>{t('REGISTER')}</Button>
             </Form>
         </Wrapper>
     </Container>

@@ -1,5 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
+import { useTranslation } from 'react-i18next';
 
 interface ICategory {
   id: number
@@ -43,12 +44,13 @@ const Button = styled.button`
     font-weight: 600;
 `
 const Category: React.FunctionComponent<ICategory> = (props) => {
+  const { t } = useTranslation();
   return (
     <Container>
         <ImageContainer src = {props.img}/>
         <InfoContainer>
             <Title>{props.title}</Title>
-            <Button>Shop Now</Button>
+            <Button>{t('Shop Now')}</Button>
         </InfoContainer>
     </Container>
   );
