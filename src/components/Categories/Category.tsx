@@ -50,7 +50,7 @@ const Category: React.FunctionComponent<ICategory> = (props) => {
         <ImageContainer src = {props.img}/>
         <InfoContainer>
             <Title>{props.title}</Title>
-            <Button>{t('Shop Now')}</Button>
+            <Button>{t('shopNow')}</Button>
         </InfoContainer>
     </Container>
   );

@@ -87,7 +87,7 @@ const Footer: React.FunctionComponent = () => {
       <Left>
         <Image src='https://app.logo.com/view/logo_f5e5e9d6-d4c6-489f-ac7e-d02742bfaafa' alt=''/>
         <Desc>
-          {t('There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don’t look even slightly believable.')}
+          {t('companyDescription')}
         </Desc>
         <SocialContainer>
           <SocialIcon color='3B5999'>
@@ -105,30 +105,30 @@ const Footer: React.FunctionComponent = () => {
         </SocialContainer>
       </Left>
       <Center>
-        <Title>{t('Useful Links')}</Title>
+        <Title>{t('usefulLinks')}</Title>
         <List>
-          <ListItem>{t('Home')}</ListItem>
-          <ListItem>{t('Cart')}</ListItem>
-          <ListItem>{t('Man Fashion')}</ListItem>
-          <ListItem>{t('Woman Fashion')}</ListItem>
-          <ListItem>{t('Accessories')}</ListItem>
-          <ListItem>{t('My Account')}</ListItem>
-          <ListItem>{t('Order Tracking')}</ListItem>
-          <ListItem>{t('Wishlist')}</ListItem>
-          <ListItem>{t('Wishlist')}</ListItem>
-          <ListItem>{t('Terms')}</ListItem>
+          <ListItem>{t('home')}</ListItem>
+          <ListItem>{t('cart')}</ListItem>
+          <ListItem>{t('manFashion')}</ListItem>
+          <ListItem>{t('womanFashion')}</ListItem>
+          <ListItem>{t('accessories')}</ListItem>
+          <ListItem>{t('myAccount')}</ListItem>
+          <ListItem>{t('orderTracking')}</ListItem>
+          <ListItem>{t('wishlist')}</ListItem>
+          <ListItem>{t('wishlist')}</ListItem>
+          <ListItem>{t('terms')}</ListItem>
         </List>
       </Center>
       <Right>
-        <Title>{t('Contact')}</Title>
+        <Title>{t('contact')}</Title>
         <ContactItem>
-          <Room style={{ marginRight: '10px' }}/> {t('622 Dixie Path , South Tobinchester 98336')}
+          <Room style={{ marginRight: '10px' }}/> {t('address')}
         </ContactItem>
         <ContactItem>
-          <Phone style={{ marginRight: '10px' }}/> {t('+1 234 56 78')}
+          <Phone style={{ marginRight: '10px' }}/> {t('phoneNumber')}
         </ContactItem>
         <ContactItem>
-          <MailOutline style={{ marginRight: '10px' }} /> {t('contact@lama.dev')}
+          <MailOutline style={{ marginRight: '10px' }} /> {t('emailAddress')}
         </ContactItem>
         <Payment src='https://i.ibb.co/Qfvn4z6/payment.png' />
       </Right>

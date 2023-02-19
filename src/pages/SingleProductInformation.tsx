@@ -6,6 +6,7 @@ import NewsLetter from '../components/Footer/NewsLetter';
 import Footer from '../components/Footer/Footer';
 import mobile from '../responsive';
 import { Add, RemoveCircle } from '@mui/icons-material';
+import { useTranslation } from 'react-i18next';
 
 export interface ColorProps {
   color: string
@@ -117,21 +118,18 @@ const Button = styled.button`
 `
 
 const SingleProductInformation: React.FunctionComponent = () => {
+  const { t } = useTranslation();
   return (
     <Container>
       <Navbar language={'EN'} logoName={'Kids Korner'} signUpString={'REGISTER'} signInString={'LOGIN'}/>
-      <Announcement>Huge deals! Buy one and receive one for free!</Announcement>
+      <Announcement>{t('hugeDeals')}</Announcement>
       <Wrapper>
         <ImageContainer>
           <Image src='https://images.pexels.com/photos/985635/pexels-photo-985635.jpeg?auto=compress&cs=tinysrgb&w=1600'/>
         </ImageContainer>
         <InformationContainer>
           <Title>Jump Suit</Title>
-          <Description>
-          There are many variations of passages of Lorem Ipsum available, but
-          the majority have suffered alteration in some form, by injected
-          humour, or randomised words which don’t look even slightly believable.
-          </Description>
+          <Description>{t('productDescription')}</Description>
           <Price>$ 20.</Price>
           <FilterContainer>
             <Filter>

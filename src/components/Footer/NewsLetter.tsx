@@ -52,8 +52,8 @@ const NewsLetter: React.FunctionComponent = () => {
   const { t } = useTranslation();
   return (
     <Container>
-        <Title>{t('Newsletter')}</Title>
-          <Desc>{t('Get timely updates from your favorite products.')}</Desc>
+        <Title>{t('newsletter')}</Title>
+          <Desc>{t('getTimelyUpdates')}</Desc>
           <InputContainer>
             <Input placeholder='Your email' />
             <Button>
