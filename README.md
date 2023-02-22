@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Getting Started with Create React App [![CodeQL](https://github.com/mherman22/kids-closet/actions/workflows/codeql.yml/badge.svg?branch=master)](https://github.com/mherman22/kids-closet/actions/workflows/codeql.yml)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
